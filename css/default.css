@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 10px;
+}
+
+.accordion {
+  list-style: none;
+}
+
+.accordion .active-entry {
+  display: none;
+}
+
+.accordion .container {
+  display: none;
+  padding: 2em;
+}
+
+.accordion h2 {
+  font: 1.5em/1 bold Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+  border: 0.1rem solid white;
+  border-top: none;
+  border-left: none;
+  color: #444;
+}
+
+.accordion h3 {
+  font: 2.5em/1 bold Arial, Helvetica, sans-serif;
+  margin-bottom: 1em;
+}
+
+.accordion p {
+  font: 1.5em/1.2 Arial, Helvetica, sans-serif;
+  margin-bottom: 1em;
+}
+
+.accordion label {
+  display: block;
+  cursor: pointer;
+  padding: 1em 0.5em;
+}
+
+/* Active state styles */
+.accordion .active-entry:checked + h2 {
+  color: #ddd;
+  background-color: white;
+}
+
+.accordion .active-entry:checked + h2 + .container {
+  display: block;
+}
+
+/* Wider screens */
+@media screen and (min-width: 768px) {
+  .accordion {
+    display: table-cell;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .accordion .container {
+    order: 1;
+  }
+}

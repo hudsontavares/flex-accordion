@@ -1,0 +1,11 @@
+{
+  "description": "Frontend Developer @ Pepper Media Holding GmbH",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/hudsontavares/fd-pepper-media.git"
+  },
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
