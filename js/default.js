@@ -5,7 +5,7 @@
       var target = $(this), sourceUrl = target.data("contents-source");
       if (!target[0].checked || sourceUrl === undefined)
         return;
-      var container = target.next("h2").next(".container");
+      var container = $(".container." + target.attr("id"));
       if (container.hasClass("loaded"))
         return;
       /* Requests the remote content */

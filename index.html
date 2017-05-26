@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/default.css" />
@@ -7,13 +7,25 @@
   </head>
   <body>
     <div class="accordion">
-
       <!-- First tab -->
       <input type="radio" class="active-entry" name="option" id="option-1" checked="checked" />
       <h2>
         <label for="option-1">Option 1</label>
       </h2>
-      <div class="container loaded">
+
+      <!-- Second tab -->
+      <input type="radio" class="active-entry" name="option" id="option-2" data-contents-source="xhr/option-2.html" />
+      <h2>
+        <label for="option-2">Option 2</label>
+      </h2>
+
+      <!-- Third tab -->
+      <input type="radio" class="active-entry" name="option" id="option-3" data-contents-source="xhr/option-3.html" />
+      <h2>
+        <label for="option-3">Option 3</label>
+      </h2>
+
+      <div class="container option-1">
         <h3>Heading 1</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tristique urna. Nulla tristique odio purus,
@@ -32,20 +44,8 @@
         </p>
       </div>
 
-      <!-- Second tab -->
-      <input type="radio" class="active-entry" name="option" id="option-2" data-contents-source="xhr/option-2.html" />
-      <h2>
-        <label for="option-2">Option 2</label>
-      </h2>
-      <div class="container" data-message="Loading data, please wait..."><!-- Data contents --></div>
-
-      <!-- Third tab -->
-      <input type="radio" class="active-entry" name="option" id="option-3" data-contents-source="xhr/option-3.html" />
-      <h2>
-        <label for="option-3">Option 3</label>
-      </h2>
-      <div class="container" data-message="Loading data, please wait..."><!-- Data contents --></div>
-
+      <div class="container option-2 loading" data-message="Loading data, please wait..."></div>
+      <div class="container option-3 loading" data-message="Loading data, please wait..."></div>
     </div>
 
     <script type="text/javascript" src="js/jquery.js"></script>
